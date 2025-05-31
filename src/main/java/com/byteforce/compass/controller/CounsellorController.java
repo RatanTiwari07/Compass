@@ -26,9 +26,4 @@ public class CounsellorController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-    
-    @PostMapping
-    public Counsellor createCounsellor(@RequestBody Counsellor counsellor) {
-        return counsellorRepository.save(counsellor);
-    }
 }
